@@ -1,0 +1,177 @@
+import tkinter
+window = tkinter.Tk()
+window.title('웹툰 장르 분류')
+window.geometry('525x450+100+100')
+
+def func1():
+   
+    if cv1.get()==1:
+        label2.grid(row=1, column=2)
+    else:
+        label2.grid_forget()
+
+       
+       
+    if cv1.get()==2:
+        label5.grid(row=1, column=5)
+    else:
+        label5.grid_forget()
+   
+
+       
+       
+    if cv1.get()==3:
+        label3.grid(row=1, column=3)
+    else:
+        label3.grid_forget()
+
+       
+    if cv1.get()==4:
+        label7.grid(row=2, column=2)
+        label10.grid(row=2, column=5)
+    else:
+        label7.grid_forget()
+        label10.grid_forget()
+
+       
+    if cv1.get()==5:
+        label6.grid(row=2, column=1)
+        label9.grid(row=2, column=4)
+    else:
+        label6.grid_forget()
+        label9.grid_forget()
+
+
+       
+    if cv1.get()==6:
+       
+        label1.grid(row=1, column=1)
+    else:
+        label1.grid_forget()
+       
+
+
+       
+    if cv1.get()==7:
+        label4.grid(row=1, column=4)
+    else:
+        label4.grid_forget()
+       
+
+       
+    if cv1.get()==8:
+        label8.grid(row=2, column=3)
+    else:
+        label8.grid_forget()
+       
+
+
+
+
+
+
+frame1 = tkinter. Frame(window, relief='solid', bd=2)
+frame1.pack(side= 'top', fill='both', expand= True)
+
+frame2 = tkinter. Frame(window, relief='solid', bd=2)
+frame2.pack(side= 'bottom', fill='both', expand= True)
+
+image1= tkinter.PhotoImage(file='전독시.png')
+image2= tkinter.PhotoImage(file='여신강림.png')
+image3= tkinter.PhotoImage(file='가비지타임.png')
+image4= tkinter.PhotoImage(file='마음의 소리.png')
+image5= tkinter.PhotoImage(file='싸움독학.png')
+image6= tkinter.PhotoImage(file='신의탑.png')
+image7= tkinter.PhotoImage(file='스위트홈.png')
+image8= tkinter.PhotoImage(file='윌유메리미.png')
+image9= tkinter.PhotoImage(file='신과 함께.png')
+image10= tkinter.PhotoImage(file='기기괴괴.png')
+
+
+label1 = tkinter.Label(frame2, image=image1)
+label2 = tkinter.Label(frame2, image=image2)
+label3 = tkinter.Label(frame2, image=image3)
+label4 = tkinter.Label(frame2, image=image4)
+label5 = tkinter.Label(frame2, image=image5)
+label6 = tkinter.Label(frame2, image=image6)
+label7 = tkinter.Label(frame2, image=image7)
+label8 = tkinter.Label(frame2, image=image8)
+label9 = tkinter.Label(frame2, image=image9)
+label10 = tkinter.Label(frame2, image=image10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+m = tkinter.Message(frame1,
+                    text= '\n\n\n\n\n\n        장르         \n\n\n\n\n\n',
+                    width=100,
+                    relief = 'solid')
+
+m.grid(row=1, column=1, rowspan=3)
+
+
+
+
+
+
+cv1= tkinter. IntVar()
+ckb1= tkinter.Radiobutton(frame1, text='  로맨스',
+                           variable = cv1,value=1, command= func1 )
+
+
+ckb2= tkinter.Radiobutton(frame1, text='  액션',
+                           variable = cv1,value=2, command= func1 )
+
+
+ckb3= tkinter.Radiobutton(frame1, text='  스포츠',
+                           variable = cv1,value=3, command= func1 )
+
+
+ckb4= tkinter.Radiobutton(frame1, text='  스릴러',
+                           variable = cv1,value=4, command= func1 )
+
+
+ckb5= tkinter.Radiobutton(frame1, text='  판타지',
+                           variable = cv1,value=5, command= func1 )
+
+
+ckb6= tkinter.Radiobutton(frame1, text='  드라마',
+                           variable = cv1,value=6, command= func1 )
+
+
+ckb7= tkinter.Radiobutton(frame1, text='  개그',
+                           variable = cv1,value=7, command= func1 )
+
+
+ckb8= tkinter.Radiobutton(frame1, text='  일상',
+                           variable = cv1,value=8, command= func1 )
+
+
+ckb1.grid(row=1, column=2)
+ckb2.grid(row=2, column=2)
+ckb3.grid(row=3, column=2)
+ckb4.grid(row=4, column=2)
+
+ckb5.grid(row=1, column=3)
+ckb6.grid(row=2, column=3)
+ckb7.grid(row=3, column=3)
+ckb8.grid(row=4, column=3)
+
+
+
+
+window.mainloop()
